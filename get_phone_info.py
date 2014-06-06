@@ -17,12 +17,13 @@ def getPhoneInfo(phone):
     with open(PHONE_DAT) as f:
         content = f.read()
     
-    headFmt = "!4si"
+    headFmt = "<4si"
     version,firstRecordOffset = struct.unpack(headFmt,content[:struct.calcsize(headFmt)])
-    # print version,firstRecordOffset 
-    recordFmt = "!iiB"
+    print version,firstRecordOffset 
+    recordFmt = "<iiB"
     singelRecordLength = struct.calcsize(recordFmt)
     recordNum = ( len(content) - firstRecordOffset) / singelRecordLength 
+    print recordNum
     l = 0
     r = recordNum
     while l<=r:
@@ -41,5 +42,4 @@ def getPhoneInfo(phone):
     return None
 
 if __name__ == "__main__":
-    for i in range(1890000,1890100):
-        print i,getPhoneInfo(i)
+    print getPhoneInfo(1521147)
