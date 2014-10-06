@@ -6,3 +6,7 @@
 
 ###数据格式
 省份|城市|区号|邮编|运营商
+
+
+###如何build phone.dat 
+https://github.com/lovedboy/bulid_phone
