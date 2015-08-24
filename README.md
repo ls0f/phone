@@ -29,6 +29,8 @@ p.find(1888888)
 
 下载phone.dat文件，用其他语言解析即可。
 
+* [lua解析脚本](https://gist.github.com/lovedboy/bbff19c91e3d98388d52)，如果不支持bit32，用[这个](https://gist.github.com/lovedboy/fe7750e202572712615a)。
+
 ####phone.dat文件格式
 
 ```
