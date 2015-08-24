@@ -66,6 +66,8 @@ class Phone(object):
         while left <= right:
             middle = (left + right) / 2
             current_offset = self.first_phone_record_offset + middle * self.phone_fmt_length
+            if current_offset >= len(self.buf):
+                return
             cur_phone, record_offset, phone_type = struct.unpack(self.phone_fmt,
                                                              self.buf[current_offset: current_offset + self.phone_fmt_length])
 
