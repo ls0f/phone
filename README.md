@@ -67,3 +67,5 @@ p.find(1888888)
 * 5 联通虚拟运营商
 * 6 移动虚拟运营商
 
+## License
+#### [MIT](https://opensource.org/licenses/mit-license.php)

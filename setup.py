@@ -1,13 +1,13 @@
-#coding:utf-8
+# coding:utf-8
 from setuptools import setup,find_packages
 
 PACKAGE = "phone"
 NAME = "phone"
 DESCRIPTION = "手机号码库"
 AUTHOR = "lovedboy"
-AUTHOR_EMAIL = "lovedboy.tk@qq.com"
+AUTHOR_EMAIL = "admin@lovedboy.com"
 URL = "https://github.com/lovedboy/phone"
-VERSION = '0.3.1'
+VERSION = '0.3.2'
 
 setup(
     name=NAME,
