@@ -1,1 +1,3 @@
-from phone import *
+from .phone import Phone
+
+__all__ = ['Phone']

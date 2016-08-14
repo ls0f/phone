@@ -1,10 +1,19 @@
-# coding:utf-8
+# -*- coding: utf-8 -*-
 
 import os
 import struct
 import sys
 
 __author__ = 'lovedboy'
+
+if sys.version_info > (3, 0):
+    def get_record_content(buf, start_offset):
+        end_offset = start_offset + buf[start_offset:].find(0x00)
+        return buf[start_offset:end_offset].decode()
+else:
+    def get_record_content(buf, start_offset):
+        end_offset = start_offset + buf[start_offset:].find('\x00')
+        return buf[start_offset:end_offset]
 
 
 class Phone(object):
@@ -66,7 +75,7 @@ class Phone(object):
         left = 0
         right = self.phone_record_count
         while left <= right:
-            middle = (left + right) / 2
+            middle = int((left + right) / 2)
             current_offset = int(self.first_phone_record_offset + middle * self.phone_fmt_length)
             if current_offset >= len(self.buf):
                 return
@@ -80,9 +89,7 @@ class Phone(object):
             elif cur_phone < int_phone:
                 left = middle + 1
             else:
-                s = record_offset
-                e = record_offset + self.buf[record_offset:].find('\0')
-                record_content = self.buf[s: e]
+                record_content = get_record_content(self.buf, record_offset)
                 return Phone._format_phone_content(phone_num, record_content,
                                                    phone_type)
 
