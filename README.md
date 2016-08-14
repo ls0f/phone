@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lovedboy/phone.svg?branch=master)](https://travis-ci.org/lovedboy/phone)
+
 ##手机号码库
 
 #### 安装
