@@ -18,8 +18,8 @@ setup(
     license="BSD",
     url=URL,
     include_package_data = True,
-    packages = find_packages(),
-    classifiers = [
+    packages=find_packages(),
+    classifiers=[
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
         'Intended Audience :: Developers',
