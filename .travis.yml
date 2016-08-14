@@ -13,4 +13,4 @@ python:
 script:
     - python -m unittest discover
     - python setup.py -q install
-    - python ./travis setup.py
+    - python ./travis/setup.py
