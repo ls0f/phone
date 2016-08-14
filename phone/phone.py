@@ -8,11 +8,11 @@ __author__ = 'lovedboy'
 
 if sys.version_info > (3, 0):
     def get_record_content(buf, start_offset):
-        end_offset = start_offset + buf[start_offset:].find(0x00)
+        end_offset = start_offset + buf[start_offset:-1].find(0x00)
         return buf[start_offset:end_offset].decode()
 else:
     def get_record_content(buf, start_offset):
-        end_offset = start_offset + buf[start_offset:].find('\x00')
+        end_offset = start_offset + buf[start_offset:-1].find('\x00')
         return buf[start_offset:end_offset]
 
 
