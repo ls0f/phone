@@ -9,7 +9,11 @@ python:
     - 3.5
     - nightly
     - pypy3
-
+    
+branches:
+  only:
+    - master
+    
 script:
     - python -m unittest discover
     - python setup.py -q install
