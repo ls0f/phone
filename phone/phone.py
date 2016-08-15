@@ -110,13 +110,8 @@ class Phone(object):
 
     def test(self):
         self.get_phone_dat_msg()
-
-        if sys.version_info.major == 2:
-            for i in xrange(1529900, 1529999):
-                print(self.human_phone_info(self.find(i)))
-        else:
-            for i in range(1529900, 1529999):
-                print(self.human_phone_info(self.find(i)))
+        for i in range(1529900, 1529999):
+            print(self.human_phone_info(self.find(i)))
 
 
 if __name__ == "__main__":
