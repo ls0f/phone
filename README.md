@@ -25,14 +25,14 @@ p.find(1888888)
 
 ####记录条数
 
-307990
+360569 (updated:2017年4月)
 
 ####其他语言
 
 下载phone.dat文件，用其他语言解析即可。
 
 * [lua解析](https://gist.github.com/lovedboy/bbff19c91e3d98388d52)，如果不支持bit32，用[这个](https://gist.github.com/lovedboy/fe7750e202572712615a)。
-* [go解析](https://gist.github.com/lovedboy/b027bba47cb69360f7bc)。
+* [go解析](https://github.com/xluohome/phonedata)。
 
 
 ####phone.dat文件格式
