@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/lovedboy/phone.svg?branch=master)](https://travis-ci.org/lovedboy/phone)
 
-##手机号码库
+## 手机号码库
 
 #### 安装
 
@@ -20,22 +20,22 @@ p  = Phone()
 p.find(1888888)
 ```
 
-###支持号段
+### 支持号段
 13\*,15\*,18\*,14[5,7],17[0,6,7,8]
 
-####记录条数
+#### 记录条数
 
 360569 (updated:2017年4月)
 
-####其他语言
+#### 其他语言支持
 
-下载phone.dat文件，用其他语言解析即可。
+下载[phone.dat](https://github.com/lovedboy/phone/raw/master/phone/phone.dat)文件，用其他语言解析即可。
 
 * [lua解析](https://gist.github.com/lovedboy/bbff19c91e3d98388d52)，如果不支持bit32，用[这个](https://gist.github.com/lovedboy/fe7750e202572712615a)。
 * [go解析](https://github.com/xluohome/phonedata)。
 
 
-####phone.dat文件格式
+#### phone.dat文件格式
 
 ```
 
