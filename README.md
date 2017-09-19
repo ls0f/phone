@@ -1,7 +1,8 @@
 [![Build Status](https://travis-ci.org/lovedboy/phone.svg?branch=master)](https://travis-ci.org/lovedboy/phone)
 
 ## 手机号码库
-
+###注意：
+截至北京时间 2017年9月19日 09:36:25 pypi上的phone库中的phone.dat依然没有更新
 #### 安装
 
 使用pip安装:
@@ -25,11 +26,11 @@ p.find(1888888)
 
 #### 记录条数
 
-360569 (updated:2017年4月)
+从https://gitee.com/oss/phonedata/blob/master/phone.dat获取了phone.dat 并替换，记录条数:364528 (updated:2017年7月)
 
 #### 其他语言支持
 
-下载[phone.dat](https://github.com/lovedboy/phone/raw/master/phone/phone.dat)文件，用其他语言解析即可。
+下载[phone.dat](https://gitee.com/oss/phonedata/blob/master/phone.dat)文件，用其他语言解析即可。
 
 * [lua解析](https://gist.github.com/lovedboy/bbff19c91e3d98388d52)，如果不支持bit32，用[这个](https://gist.github.com/lovedboy/fe7750e202572712615a)。
 * [go解析](https://github.com/xluohome/phonedata)。
