@@ -7,7 +7,7 @@ DESCRIPTION = "手机号码库"
 AUTHOR = "lovedboy"
 AUTHOR_EMAIL = "admin@lovedboy.com"
 URL = "https://github.com/lovedboy/phone"
-VERSION = '0.4.0'
+VERSION = '0.4.1'
 
 setup(
     name=NAME,
