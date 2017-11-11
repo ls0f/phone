@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import mmap
 import os
 import struct
 import sys
@@ -22,8 +23,8 @@ class Phone(object):
         if dat_file is None:
             dat_file = os.path.join(os.path.dirname(__file__), "phone.dat")
 
-        with open(dat_file, 'rb') as f:
-            self.buf = f.read()
+        self._dat_file_object = open(dat_file, 'rb')
+        self.buf = mmap.mmap(self._dat_file_object.fileno(), 0, access=mmap.ACCESS_READ)
 
         self.head_fmt = "<4si"
         self.phone_fmt = "<iiB"
@@ -33,6 +34,9 @@ class Phone(object):
             self.head_fmt, self.buf[:self.head_fmt_length])
         self.phone_record_count = (len(
             self.buf) - self.first_phone_record_offset) / self.phone_fmt_length
+
+    def __del__(self):
+        self._dat_file_object.close()
 
     def get_phone_dat_msg(self):
         print("版本号:{}".format(self.version))
