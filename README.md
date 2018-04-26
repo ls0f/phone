@@ -26,7 +26,7 @@ p.find(1888888)
 
 #### 记录条数
 
-从 https://gitee.com/oss/phonedata/blob/master/phone.dat 获取了phone.dat 并替换，记录条数:364528 (updated:2017年7月)
+从 https://gitee.com/oss/phonedata/blob/master/phone.dat 获取了phone.dat 并替换，记录条数:387695 (updated:2018年7月)
 
 #### 其他语言支持
 
