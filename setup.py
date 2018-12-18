@@ -4,10 +4,10 @@ from setuptools import setup,find_packages
 PACKAGE = "phone"
 NAME = "phone"
 DESCRIPTION = "手机号码库"
-AUTHOR = "lovedboy"
+AUTHOR = "ls0f"
 AUTHOR_EMAIL = "admin@lovedboy.com"
-URL = "https://github.com/lovedboy/phone"
-VERSION = '0.4.1'
+URL = "https://github.com/ls0f/phone"
+VERSION = '0.4.2'
 
 setup(
     name=NAME,
