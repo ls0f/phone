@@ -52,6 +52,10 @@ class Phone(object):
             return "联通"
         if no == 1:
             return "移动"
+        if no == 7:
+            return "广电"
+        if no == 8:
+            return "广电虚拟运营商"
 
     @staticmethod
     def _format_phone_content(phone_num, record_content, phone_type):
