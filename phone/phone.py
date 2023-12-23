@@ -21,8 +21,8 @@ class Phone(object):
 
         if dat_file is None:
             dat_file = os.path.join(os.path.dirname(__file__), "phone.dat")
-
-        with open(dat_file, 'rb') as f:
+        self.dat_file = dat_file
+        with open(self.dat_file, 'rb') as f:
             self.buf = f.read()
 
         self.head_fmt = "<4si"
@@ -37,6 +37,7 @@ class Phone(object):
     def get_phone_dat_msg(self):
         print("版本号:{}".format(self.version))
         print("总记录条数:{}".format(self.phone_record_count))
+        print("dat_file:{}".format(self.dat_file))
 
     @staticmethod
     def get_phone_no_type(no):
@@ -82,11 +83,12 @@ class Phone(object):
         while left <= right:
             middle = (left + right) // 2
             current_offset = (self.first_phone_record_offset +
-                middle * self.phone_fmt_length)
+                              middle * self.phone_fmt_length)
             if current_offset >= buflen:
                 return
 
-            buffer = self.buf[current_offset: current_offset + self.phone_fmt_length]
+            buffer = self.buf[current_offset: current_offset +
+                              self.phone_fmt_length]
             cur_phone, record_offset, phone_type = struct.unpack(self.phone_fmt,
                                                                  buffer)
 

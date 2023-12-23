@@ -20,7 +20,8 @@ class TestPhone(TestCase):
         self.assertEqual(self.p.get_phone_no_type(6), '移动虚拟运营商')
         self.assertEqual(self.p.get_phone_no_type(5), '联通虚拟运营商')
         self.assertEqual(self.p.get_phone_no_type(4), '电信虚拟运营商')
-        self.assertEqual(self.p.get_phone_no_type(7), None)
+        self.assertEqual(self.p.get_phone_no_type(7), '广电')
+        self.assertEqual(self.p.get_phone_no_type(8), '广电虚拟运营商')
 
     def test_find_on_assert_error(self):
 
