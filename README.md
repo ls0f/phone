@@ -31,10 +31,10 @@ p.find(1888888)
 
 下载[phone.dat](https://github.com/lovedboy/phone/raw/master/phone/phone.dat)文件，用其他语言解析即可。
 
-* [lua解析](https://gist.github.com/lovedboy/bbff19c91e3d98388d52)，如果不支持bit32，用[这个](https://gist.github.com/lovedboy/fe7750e202572712615a)。
-* [go解析](https://github.com/xluohome/phonedata)。
-* [Node解析](https://github.com/conzi/phone)。
-
+* [lua解析](https://gist.github.com/lovedboy/bbff19c91e3d98388d52)，如果不支持bit32，用[这个](https://gist.github.com/lovedboy/fe7750e202572712615a)
+* [go解析](https://github.com/xluohome/phonedata)
+* [Node解析](https://github.com/conzi/phone)
+* [PHP解析](https://github.com/shitoudev/phone-location)
 
 #### phone.dat文件格式
 
